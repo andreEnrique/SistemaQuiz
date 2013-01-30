@@ -1,6 +1,5 @@
 package Teste;
 
-import static org.junit.Assert.fail;
 import junit.framework.Assert;
 
 import org.junit.Before;
@@ -39,7 +38,7 @@ public class PerguntaTeste {
 	@Test
 	public void testSetOpcao_01() {
 		pergunta.setPergunta("op1");
-		Assert.assertEquals("op1", pergunta.getPergunta());
+		Assert.assertEquals("op1", pergunta.getOpcao_01());
 	}
 
 	@Test
@@ -50,7 +49,7 @@ public class PerguntaTeste {
 	@Test
 	public void testSetOpcao_02() {
 		pergunta.setPergunta("op2");
-		Assert.assertEquals("op2", pergunta.getPergunta());
+		Assert.assertEquals("op2", pergunta.getOpcao_02());
 	}
 
 	@Test
@@ -61,7 +60,7 @@ public class PerguntaTeste {
 	@Test
 	public void testSetOpcao_03() {
 		pergunta.setPergunta("op3");
-		Assert.assertEquals("op3", pergunta.getPergunta());
+		Assert.assertEquals("op3", pergunta.getOpcao_03());
 	}
 
 	@Test
@@ -72,7 +71,7 @@ public class PerguntaTeste {
 	@Test
 	public void testSetOpcao_04() {
 		pergunta.setPergunta("op4");
-		Assert.assertEquals("op4", pergunta.getPergunta());
+		Assert.assertEquals("op4", pergunta.getOpcao_04());
 	}
 
 
@@ -84,7 +83,7 @@ public class PerguntaTeste {
 	@Test
 	public void testSetCorreta() {
 		pergunta.setPergunta("correta");
-		Assert.assertEquals("correta", pergunta.getPergunta());
+		Assert.assertEquals("correta", pergunta.getCorreta());
 	}
 
 }
