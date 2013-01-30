@@ -33,7 +33,7 @@ public class PerguntaTeste {
 
 	@Test
 	public void testGetOpcao_01() {
-		Assert.assertEquals("op1", pergunta.getPergunta());
+		Assert.assertEquals("op1", pergunta.getOpcao_01());
 	}
 
 	@Test
@@ -44,7 +44,7 @@ public class PerguntaTeste {
 
 	@Test
 	public void testGetOpcao_02() {
-		Assert.assertEquals("op2", pergunta.getPergunta());
+		Assert.assertEquals("op2", pergunta.getOpcao_02());
 	}
 
 	@Test
@@ -55,7 +55,7 @@ public class PerguntaTeste {
 
 	@Test
 	public void testGetOpcao_03() {
-		Assert.assertEquals("op3", pergunta.getPergunta());
+		Assert.assertEquals("op3", pergunta.getOpcao_03());
 	}
 
 	@Test
@@ -78,7 +78,7 @@ public class PerguntaTeste {
 
 	@Test
 	public void testGetCorreta() {
-		Assert.assertEquals("correta", pergunta.getPergunta());
+		Assert.assertEquals("correta", pergunta.getCorreta());
 	}
 
 	@Test
