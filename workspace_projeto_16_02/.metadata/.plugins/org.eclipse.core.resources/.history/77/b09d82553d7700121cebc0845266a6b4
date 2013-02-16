@@ -1,0 +1,10 @@
+package br.com.ufpb.classes;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Rank {
+	
+	List<Rankeado> rankeados = new ArrayList<>();
+
+}

@@ -1,0 +1,51 @@
+package br.com.ufpb.classes;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.ArrayList;
+
+import javax.swing.JOptionPane;
+
+public class Jogar {
+	
+	Arquivo arquivo = new Arquivo();
+	
+	ArrayList<Pergunta> perguntaSort;
+	
+	public Jogar() {
+		perguntaSort = new ArrayList<>();
+	}
+	
+	public void sortearQuestao(){
+		try {
+			perguntaSort = arquivo.lerPergunta();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		for (Pergunta pergunta : perguntaSort) {
+			String op = JOptionPane.showInputDialog(pergunta.getPergunta() + "\n\n" + pergunta.getOp_01() + "\n" + pergunta.getOp_02() + "\n" + pergunta.getOp_03() + "\n" + pergunta.getOp_04());
+			if(Integer.parseInt(op) > 0 && Integer.parseInt(op) <= 4){
+				if(op.equals(pergunta.getCorreta())){
+					
+				}else{
+					
+				}
+			}else{
+				while(!(Integer.parseInt(op) > 0 && Integer.parseInt(op) <= 4)){
+					JOptionPane.showMessageDialog(null, "Opção inválida!");
+					op = JOptionPane.showInputDialog(pergunta.getPergunta() + "\n\n" + pergunta.getOp_01() + "\n" + pergunta.getOp_02() + "\n" + pergunta.getOp_03() + "\n" + pergunta.getOp_04());
+				}
+				if(op.equals(pergunta.getCorreta())){
+					
+				}else{
+					
+				}
+			}
+		}
+	}
+
+}

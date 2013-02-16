@@ -1,0 +1,19 @@
+package br.com.ufpb.classes;
+
+import javax.swing.JOptionPane;
+
+public class Login {
+
+	
+	
+	public Login() {
+	}
+	
+	public int login(){
+		int retorno = 0;
+		
+		if()
+		return retorno;
+	}
+
+}

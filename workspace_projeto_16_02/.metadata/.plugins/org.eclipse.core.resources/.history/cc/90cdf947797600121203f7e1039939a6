@@ -1,0 +1,13 @@
+package br.com.ufpb.classes;
+
+import javax.swing.JOptionPane;
+
+public class Jogar {
+	
+	MenuPrincipal menuP = new MenuPrincipal();
+	
+	public void jogar(){
+		JOptionPane.showMessageDialog(null, "Jogar");
+		menuP.menu();
+	}
+}

@@ -1,0 +1,29 @@
+package br.com.ufpb.classes;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.ArrayList;
+
+
+public class Atualizacao {
+	
+	Arquivo arquivo = new Arquivo();
+	ArrayList<Aluno> alunoAux;
+	
+	public Atualizacao() {
+		alunoAux = new ArrayList<>();
+	}
+	
+	public ArrayList<Aluno> atualizar(){
+		try {
+			alunoAux = arquivo.listarAluno();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return alunoAux;
+	}
+}

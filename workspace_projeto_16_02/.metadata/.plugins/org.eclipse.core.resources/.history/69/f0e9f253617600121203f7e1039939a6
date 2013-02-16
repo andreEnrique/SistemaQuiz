@@ -1,0 +1,13 @@
+package br.com.ufpb.classes;
+
+public class Principal {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		AlunoMetodos alunoM = new AlunoMetodos();
+		alunoM.cadastrarAluno();
+	}
+
+}

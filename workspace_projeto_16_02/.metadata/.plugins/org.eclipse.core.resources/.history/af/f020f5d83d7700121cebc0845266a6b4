@@ -1,0 +1,18 @@
+package br.com.ufpb.classes;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Rank {
+	
+	List<Rankeado> rankeados;
+	
+	public Rank() {
+		rankeados = new ArrayList<>();
+	}
+	
+	public void adicionarRankeado(String nome, int pontuacao){
+		rankeados.add(new Rankeado(nome, pontuacao));
+	}
+
+}

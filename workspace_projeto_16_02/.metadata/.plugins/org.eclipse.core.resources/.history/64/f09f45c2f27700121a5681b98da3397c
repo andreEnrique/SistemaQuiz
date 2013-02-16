@@ -1,0 +1,43 @@
+package classes;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+import javax.swing.JOptionPane;
+
+public class MenuPrincipal {
+	
+	Login 	login 		= new Login()  	;
+	Arquivo arquivo 	= new Arquivo()	;
+	
+	public MenuPrincipal() {
+	}
+	
+	public void menuPrincipal(){
+		String op = JOptionPane.showInputDialog("1 - Jogar.\n2 - Rank.\n3 - Instruções.\n4 - Sair.");
+		if(op.equals("1")){
+			login.login();
+			menuPrincipal();
+		}else if(op.equals("2")){
+			login.rank.mostrarRank();
+			menuPrincipal();
+		}else if(op.equals("3")){
+			JOptionPane.showMessageDialog(null, "Instruções!");
+			menuPrincipal();
+		}else if(op.equals("4")){
+			try {
+				arquivo.escreverAluno(login.gerenciadorP.alunoM.alunos);
+				arquivo.escreverRank(login.rank.rankeados);
+				JOptionPane.showMessageDialog(null, "Obrigado por utilizar o nosso software!");
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}else{
+			JOptionPane.showMessageDialog(null, "Opção inválida!");
+			menuPrincipal();
+		}
+	}
+
+}

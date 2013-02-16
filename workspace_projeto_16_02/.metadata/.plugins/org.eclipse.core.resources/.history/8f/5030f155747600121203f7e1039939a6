@@ -1,0 +1,21 @@
+package br.com.ufpb.classes;
+
+import java.util.ArrayList;
+
+public class AlunoMetodos {
+	
+	private ArrayList<Aluno> alunos;
+	
+	public AlunoMetodos() {
+		alunos = new ArrayList<>();
+	}
+	
+	public void cadastrarAluno(String nome, String matricula){
+		alunos.add(new Aluno(nome, matricula));
+	}
+
+	public ArrayList<Aluno> getAlunos() {
+		return alunos;
+	}
+
+}

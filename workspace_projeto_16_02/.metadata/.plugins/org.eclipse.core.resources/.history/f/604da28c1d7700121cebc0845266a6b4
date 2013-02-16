@@ -1,0 +1,29 @@
+package br.com.ufpb.classes;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.ArrayList;
+
+import javax.swing.JOptionPane;
+
+public class Principal {
+
+	public static void main(String[] args) {
+//		MenuPrincipal mp = new MenuPrincipal();
+//		mp.menuPrincipal();
+		Arquivo a = new Arquivo();
+		try {
+			ArrayList<Pergunta> aux = a.lerPergunta();
+			for (Pergunta pergunta : aux) {
+				JOptionPane.showMessageDialog(null, pergunta.getPergunta() + "\n" + pergunta.getOp_01() + "\n" + pergunta.getOp_02() + "\n" + pergunta.getOp_03() + "\n" + pergunta.getOp_04() + "\n" );
+			}
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

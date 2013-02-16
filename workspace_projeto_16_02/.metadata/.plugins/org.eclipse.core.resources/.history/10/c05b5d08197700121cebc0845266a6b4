@@ -1,0 +1,56 @@
+package br.com.ufpb.classes;
+
+import java.util.ArrayList;
+
+import javax.swing.JOptionPane;
+
+public class AlunoMetodos {
+	
+	private static final String ADM_NOME      = "adm";
+	private static final String ADM_MATRICULA = "adm";
+	
+	GerenciadorProfessor gerenciadorP = new GerenciadorProfessor();
+	AlunoMetodos         alunoM       = new AlunoMetodos();
+	Jogar				 jogo		  = new Jogar();
+	
+	ArrayList<Aluno> alunos;
+	
+	public AlunoMetodos() {
+		alunos = new ArrayList<>();
+	}
+	
+	public void cadastrarAluno(){
+		String nome      = JOptionPane.showInputDialog("Digite seu nome:");
+		String matricula = JOptionPane.showInputDialog("Digite sua matrícula:");
+		if(nome.equals(ADM_NOME) && nome.equals(ADM_MATRICULA)){
+			gerenciadorP.menu();
+		}else{
+			alunos.add(new Aluno(nome, matricula));
+			jogo.jogar();
+		}
+	}
+	
+	public void listarAluno(){
+		if(alunos.size() > 0){
+			JOptionPane.showMessageDialog(null, alunos.size() + " alunos cadastrados!");
+			for (Aluno aluno : alunos) {
+				JOptionPane.showMessageDialog(null, "Nome: " + aluno.getNome() + "\nMatrícula: " + aluno.getMatricula());
+			}
+		}else{
+			JOptionPane.showMessageDialog(null, "Nenhum aluno cadastrado!");
+		}
+	}
+	
+	public void excluirAluno(){
+		if(alunos.size() > 0){
+			for (Aluno aluno : alunos) {
+				String opcao = JOptionPane.showInputDialog("Nome: " + aluno.getNome() + "\nMatrícula: " + aluno.getMatricula() + "\n\nExcluir?\n1 - Sim\nQualquer valor - Não");
+				if(opcao.equals("1")){
+					alunos.remove(aluno);
+				}
+			}
+		}else{
+			JOptionPane.showMessageDialog(null, "Nenhum aluno cadastrado!");
+		}
+	}
+}

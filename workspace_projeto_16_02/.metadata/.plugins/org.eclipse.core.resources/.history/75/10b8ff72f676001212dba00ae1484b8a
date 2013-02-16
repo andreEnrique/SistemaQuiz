@@ -1,0 +1,26 @@
+package classes;
+
+import javax.swing.JOptionPane;
+
+public class GerenciadorProfessor {
+
+	AlunoMetodos alunoM = new AlunoMetodos();
+	
+	public GerenciadorProfessor() {
+	}
+	
+	public void menu(){
+		String op = JOptionPane.showInputDialog("1 - Listar Aluno\n2 - Excluir Aluno");
+		if(op.equals("1")){
+			alunoM.listarAluno();
+			menu();
+		}else if(op.equals("2")){
+			alunoM.excluirAluno();
+			menu();
+		}else{
+			JOptionPane.showMessageDialog(null, "Opção inválida!");
+			menu();
+		}
+	}
+
+}

@@ -1,0 +1,39 @@
+package br.com.ufpb.testes;
+
+import static org.junit.Assert.*;
+
+import java.util.ArrayList;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import br.com.ufpb.classes.Atualizacao;
+import br.com.ufpb.classes.Pergunta;
+
+public class AtualizacaoTest {
+
+	Atualizacao atualizacao;
+	ArrayList<Pergunta> aPerguntas;
+	
+	@Before
+	public void setUp() throws Exception {
+		atualizacao = new Atualizacao();
+		aPerguntas	= new ArrayList<>();
+	}
+
+	@Test
+	public void testAtualizarPergutas() {
+		assertEquals(aPerguntas, atualizacao.atualizarPergutas());
+	}
+
+	@Test
+	public void testAtualizarAlunos() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testAtualizarRank() {
+		fail("Not yet implemented");
+	}
+
+}

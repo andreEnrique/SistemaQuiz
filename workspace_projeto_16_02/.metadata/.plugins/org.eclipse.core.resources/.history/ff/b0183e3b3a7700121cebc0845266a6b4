@@ -1,0 +1,15 @@
+package br.com.ufpb.classes;
+
+public class Rankeado {
+	
+	private String nome;
+	private int pontuacao;
+	
+	
+	public Rankeado() {
+	}
+	
+	public Rankeado(String nome, int pontuacao) {
+	}
+
+}

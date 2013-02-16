@@ -1,0 +1,13 @@
+package classes;
+
+public class Principal {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		GerenciadorProfessor gp = new GerenciadorProfessor();
+		gp.menu();
+	}
+
+}

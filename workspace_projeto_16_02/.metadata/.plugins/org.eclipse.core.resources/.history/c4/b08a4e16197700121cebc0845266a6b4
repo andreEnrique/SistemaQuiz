@@ -1,0 +1,13 @@
+package br.com.ufpb.testes;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+public class Principal {
+
+	public static void main(String[] args) throws FileNotFoundException, ClassNotFoundException, IOException {
+		MenuPrincipal menuP = new MenuPrincipal();
+		menuP.menu();
+	}
+
+}

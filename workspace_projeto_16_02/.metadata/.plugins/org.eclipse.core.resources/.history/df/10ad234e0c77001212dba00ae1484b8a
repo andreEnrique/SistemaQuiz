@@ -1,0 +1,56 @@
+package classes;
+
+import java.util.ArrayList;
+
+import javax.swing.JOptionPane;
+
+public class AlunoMetodos {
+	
+
+	
+	ArrayList<Aluno> alunos;
+	
+	public AlunoMetodos() {
+		alunos = new ArrayList<>();
+	}
+	
+	public void cadastrarAluno(String nome, String matricula){
+		alunos.add(new Aluno(nome, matricula, 0));
+		JOptionPane.showMessageDialog(null, "Aluno cadastrado com sucesso!");
+	}
+	
+	public void listarAluno(){
+		if(alunos.size() > 0){
+			JOptionPane.showMessageDialog(null,alunos.size() + " alunos cadastrados!");
+			for (Aluno aluno : alunos) {
+				JOptionPane.showMessageDialog(null, "Nome: " + aluno.getNome() + "\nMatrícula: " + aluno.getMatricula());
+			}
+		}else{
+			JOptionPane.showMessageDialog(null, "Nenhum aluno cadastrado!");
+		}
+	}
+	
+	public void excluirAluno(){
+		String alunoAux = "";
+		int i = 0;
+		if(alunos.size() > 0){
+			for (Aluno aluno : alunos) {
+				i++;
+				alunoAux += ((String.valueOf(i)) + " - " + aluno.getNome() + "\n");
+			}
+			int delete = Integer.parseInt(JOptionPane.showInputDialog("Qual aluno deseja excluir? \n" + alunoAux + "0 - Nenhuma"));
+			if(delete > 0 && delete <= i){
+				alunos.remove(delete - 1);
+				JOptionPane.showMessageDialog(null, "Aluno excluído com sucesso!");
+			}else if(delete == 0){
+				JOptionPane.showMessageDialog(null, "Nenhuma aluno excluído!");
+			}else{
+				JOptionPane.showMessageDialog(null, "Opção inválida!");
+				excluirAluno();
+			}
+		}else{
+			JOptionPane.showMessageDialog(null, "Nenhum aluno cadastrado!");
+		}
+	}
+
+}

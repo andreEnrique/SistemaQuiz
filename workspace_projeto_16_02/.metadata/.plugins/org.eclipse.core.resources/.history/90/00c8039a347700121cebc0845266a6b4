@@ -1,0 +1,41 @@
+package br.com.ufpb.classes;
+
+import javax.swing.JOptionPane;
+
+public class Login {
+	
+	private static final String ADM_NOME      = "adm";
+	private static final String ADM_MATRICULA = "adm";
+	
+	GerenciadorProfessor gerenciadorP = new GerenciadorProfessor();
+	
+	private String nome;
+	private String matricula;
+	
+	Jogar jogar = new Jogar();
+	
+	public Login() {
+	}
+	
+	public void login(){
+		nome = JOptionPane.showInputDialog("Digite seu nome:");
+		matricula = JOptionPane.showInputDialog("Digite sua matricula:");
+		if(nome.equals(ADM_NOME) && matricula.equals(ADM_MATRICULA)){
+			gerenciadorP.menu();
+		}else{
+			this.gerenciadorP.alunoM.cadastrarAluno(nome, matricula);
+			jogar.sortearQuestao();
+		}
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public String getMatricula() {
+		return matricula;
+	}
+	
+	
+
+}

@@ -1,0 +1,18 @@
+package classes;
+
+public class Pergunta {
+	
+	private String pergunta;
+	private String op_01;
+	private String op_02;
+	private String op_03;
+	private String op_04;
+	private String correta;
+	
+	public Pergunta() {
+	}
+	
+	public Pergunta(String nome, String op01, String op02, String op03, String op04, String correta) {
+	}
+
+}

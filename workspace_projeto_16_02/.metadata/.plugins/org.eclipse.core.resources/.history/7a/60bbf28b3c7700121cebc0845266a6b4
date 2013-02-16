@@ -1,0 +1,28 @@
+package br.com.ufpb.classes;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import javax.swing.JOptionPane;
+
+public class Rank {
+	
+	List<Rankeado> rankeados = new ArrayList<>();
+	
+	public Rank() {
+	}
+	
+	public void rank(){
+		String aux = "";
+		Collections.sort(rankeados);
+		for (Rankeado rank : rankeados) {
+			aux += rank.getNome() + "          " + rank.getPontuacao();
+		}
+		JOptionPane.showMessageDialog(null,"     NOME          PONTUAÇÂO\n\n" + aux);
+	}
+	
+	public void adicionarRank(String nome, int pontuacao){
+		this.rankeados.add(new Rankeado(nome, pontuacao));
+	}
+}

@@ -1,0 +1,9 @@
+package br.com.ufpb.classes;
+
+public class Atualização {
+	
+	Arquivo arquivo = new Arquivo();
+	
+	
+
+}
