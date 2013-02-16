@@ -1,0 +1,29 @@
+package br.com.ufpb.classes;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.ArrayList;
+
+public class Jogar {
+	
+	Arquivo arquivo = new Arquivo();
+	
+	ArrayList<Pergunta> perguntaSort;
+	
+	public Jogar() {
+		perguntaSort = new ArrayList<>();
+	}
+	
+	public void sortearQuestao(){
+		try {
+			perguntaSort = arquivo.lerPergunta();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

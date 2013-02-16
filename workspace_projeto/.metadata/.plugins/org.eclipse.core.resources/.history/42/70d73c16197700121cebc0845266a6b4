@@ -1,0 +1,10 @@
+package br.com.ufpb.testes;
+
+import javax.swing.JOptionPane;
+
+public class Jogar {
+	
+	public void jogar(){
+		JOptionPane.showMessageDialog(null, "Jogar");
+	}
+}

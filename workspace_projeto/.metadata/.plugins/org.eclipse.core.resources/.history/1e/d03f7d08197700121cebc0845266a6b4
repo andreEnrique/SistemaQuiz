@@ -1,0 +1,11 @@
+package br.com.ufpb.classes;
+
+import javax.swing.JOptionPane;
+
+public class Estatistica {
+	
+	public void estatisticas(){
+		JOptionPane.showMessageDialog(null, "Aqui são as estatisticas.");
+	}
+
+}

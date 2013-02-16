@@ -1,0 +1,9 @@
+package classes;
+
+public class Jogar {
+
+	public int exibirPerguntas(String nome){
+		int pontuacao = 0;
+		return pontuacao;
+	}
+}

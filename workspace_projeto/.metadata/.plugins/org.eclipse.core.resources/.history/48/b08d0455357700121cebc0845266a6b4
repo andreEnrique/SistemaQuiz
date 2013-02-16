@@ -1,0 +1,50 @@
+package br.com.ufpb.classes;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.ArrayList;
+
+import javax.swing.JOptionPane;
+
+public class Jogar {
+	
+	Arquivo arquivo = new Arquivo();
+	AlunoMetodos alunoM = new AlunoMetodos();
+	
+	ArrayList<Pergunta> perguntaSort;
+	
+	public Jogar() {
+		perguntaSort = new ArrayList<>();
+	}
+	
+	public void sortearQuestao(String nome){
+		int potuacao = 0;
+		try {
+			perguntaSort = arquivo.lerPergunta();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		for (Pergunta pergunta : perguntaSort) {
+			String op = JOptionPane.showInputDialog(pergunta.getPergunta() + "\n\n1 - " + pergunta.getOp_01() + ".\n2 - " + pergunta.getOp_02() + ".\n3 - " + pergunta.getOp_03() + ".\n4 - " + pergunta.getOp_04());
+			if(Integer.parseInt(op) > 0 && Integer.parseInt(op) <= 4){
+				if(op.equals(pergunta.getCorreta())){
+					potuacao += 5;
+				}
+			}else{
+				while(!(Integer.parseInt(op) > 0 && Integer.parseInt(op) <= 4)){
+					JOptionPane.showMessageDialog(null, "Opção inválida!");
+					op = JOptionPane.showInputDialog(pergunta.getPergunta() + "\n\n1 - " + pergunta.getOp_01() + ".\n2 - " + pergunta.getOp_02() + ".\n3 - " + pergunta.getOp_03() + ".\n4 - " + pergunta.getOp_04());
+				}
+				if(op.equals(pergunta.getCorreta())){
+					potuacao += 5;
+				}
+			}
+		}
+		JOptionPane.showMessageDialog(null, "      Parabéns!\n" + nome + "Sua pontuação: " + potuacao);
+	}
+
+}

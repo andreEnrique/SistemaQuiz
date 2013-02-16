@@ -1,0 +1,15 @@
+package br.com.ufpb.classes;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+public class Principal {
+
+	public static void main(String[] args) throws FileNotFoundException, ClassNotFoundException, IOException {
+		AlunoMetodos alunoM = new AlunoMetodos();
+		alunoM.cadastrarAluno();
+		alunoM.cadastrarAluno();
+		alunoM.listarAluno();
+	}
+
+}

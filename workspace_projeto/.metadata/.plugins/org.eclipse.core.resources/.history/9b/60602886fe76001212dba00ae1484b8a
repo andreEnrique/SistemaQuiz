@@ -1,0 +1,15 @@
+package classes;
+
+import javax.swing.JOptionPane;
+
+public class Login {
+	
+	AlunoMetodos alunoM = new AlunoMetodos();
+	
+	public void login(){
+		String nome = JOptionPane.showInputDialog("Digite seu nome:");
+		String matricula = JOptionPane.showInputDialog("Digite sua matricula:");
+		alunoM.cadastrarAluno(nome, matricula);
+	}
+
+}

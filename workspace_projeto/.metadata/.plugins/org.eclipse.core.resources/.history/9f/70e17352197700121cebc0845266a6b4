@@ -1,0 +1,11 @@
+package br.com.ufpb.classes;
+
+import java.util.ArrayList;
+
+public class Arquivo {
+	
+	public void escreverPergunta(ArrayList<Pergunta>){
+		
+	}
+
+}

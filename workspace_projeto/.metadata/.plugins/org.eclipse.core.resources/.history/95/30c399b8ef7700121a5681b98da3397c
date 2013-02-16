@@ -1,0 +1,23 @@
+package classes;
+
+import java.util.ArrayList;
+
+import javax.swing.JOptionPane;
+
+public class Rank {
+
+	ArrayList<Aluno> rankeados;
+	
+	public Rank() {
+		rankeados = new ArrayList<>();
+	}
+	
+	public void mostrarRank(){
+		
+		JOptionPane.showMessageDialog(null, "            RANK\n\n" + rankeados.size());
+	}
+	
+	public void adicionarRank(String nome, String matricula,int pontuacao){
+		this.rankeados.add(new Aluno(nome, matricula, pontuacao));
+	}
+}

@@ -1,0 +1,44 @@
+package br.com.ufpb.classes;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.ArrayList;
+
+import javax.swing.JOptionPane;
+
+public class AlunoMetodos {
+	
+	public static final String ADM_NOME 		= "adm";
+	public static final String ADM_MATRICULA 	= "adm";
+	
+	Arquivo arquivo = new Arquivo();
+	
+	private ArrayList<Aluno> alunos; 
+	
+	
+	public AlunoMetodos() {
+		alunos = new ArrayList<>();
+	}
+	
+	/*
+	 * Método que cadastra aluno.
+	 * Verifica se nome e matrícula é iqual ao do ADM, se sim, retorna o valor 1,
+	 * senão, verifica se o usuário já está cadastrado, se não cadastra usuário,
+	 * se sim, não o cadastra. 
+	 */
+	public void cadastrarAluno() throws FileNotFoundException, IOException, ClassNotFoundException{
+		String nome = JOptionPane.showInputDialog("\tDigite se nome:");
+		String matricula = JOptionPane.showInputDialog("\tDigite sua matrícula:");
+		alunos = arquivo.listarAluno();
+		alunos.add(new Aluno(nome, matricula));
+		arquivo.adicionarAluno(alunos);
+	}
+
+	public void listarAluno() throws FileNotFoundException, ClassNotFoundException, IOException{
+		ArrayList<Aluno> alunoRetorno = arquivo.listarAluno();
+		for (Aluno aluno : alunoRetorno) {
+			JOptionPane.showMessageDialog(null, "Nome: " + aluno.getNome() + "\nMatrícula: " + aluno.getMatricula());
+		}
+	}
+	
+}

@@ -1,0 +1,56 @@
+package classes;
+
+import java.util.ArrayList;
+
+import javax.swing.JOptionPane;
+
+public class AlunoMetodos {
+	
+	private static final String ADM_NOME      = "adm";
+	private static final String ADM_MATRICULA = "adm";
+	
+	GerenciadorProfessor gerenciadorP = new GerenciadorProfessor();
+	
+	ArrayList<Aluno> alunos;
+	
+	public AlunoMetodos() {
+		alunos = new ArrayList<>();
+	}
+	
+	public void cadastrarAluno(){
+		String nome = JOptionPane.showInputDialog("Digite seu nome:");
+		String matricula = JOptionPane.showInputDialog("Digite sua matricula:");
+		if(nome.equals(ADM_NOME) && matricula.equals(ADM_MATRICULA)){
+			gerenciadorP.menu();
+		}else{
+			alunos.add(new Aluno(nome, matricula, 0));
+		}
+		
+	}
+	
+	public void listarAluno(){
+		if(alunos.size() > 0){
+			JOptionPane.showMessageDialog(null,alunos.size() + " alunos cadastrados!");
+			for (Aluno aluno : alunos) {
+				JOptionPane.showMessageDialog(null, "Nome: " + aluno.getNome() + "\nMatrícula" + aluno.getMatricula());
+			}
+		}else{
+			JOptionPane.showMessageDialog(null, "Nenhum aluno cadastrado!");
+		}
+	}
+	
+	public void excluirAluno(){
+		if(alunos.size() > 0){
+			for (Aluno aluno : alunos) {
+				String op = JOptionPane.showInputDialog("Nome: " + aluno.getNome() + "\nMatrícula" + aluno.getMatricula());
+				if(op.equals("1")){
+					alunos.remove(aluno);
+					JOptionPane.showMessageDialog(null, "Aluno removido com sucesso!");
+				}
+			}
+		}else{
+			JOptionPane.showMessageDialog(null, "Nenhum aluno cadastrado!");
+		}
+	}
+
+}

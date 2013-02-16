@@ -1,0 +1,17 @@
+package br.com.ufpb.classes;
+
+import java.util.ArrayList;
+
+
+public class Atualizacao {
+	
+	Arquivo arquivo = new Arquivo();
+	ArrayList<Aluno> alunoAux;
+	
+	public Atualizacao() {
+		alunoAux = new ArrayList<>();
+	}
+	
+	public void atualizar(){
+	}
+}

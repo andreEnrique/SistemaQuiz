@@ -1,0 +1,18 @@
+package teste;
+
+import javax.swing.JOptionPane;
+
+public class Menu02 {
+	
+	Menu01 m01 = new Menu01();
+	
+	public void menu02(){
+		String opcao = JOptionPane.showInputDialog("1 - Volta ao menu anterior\n2 - Continua aqui!");
+		if(opcao.equals("1")){
+			m01.menu01();
+		}else{
+			JOptionPane.showMessageDialog(null, "Continuando aqui...");
+			menu02();
+		}
+	}
+}

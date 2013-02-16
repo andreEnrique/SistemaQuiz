@@ -1,0 +1,14 @@
+package teste;
+
+public class Principal {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Menu01 menu = new Menu01();
+		menu.menu01();
+	}
+
+}

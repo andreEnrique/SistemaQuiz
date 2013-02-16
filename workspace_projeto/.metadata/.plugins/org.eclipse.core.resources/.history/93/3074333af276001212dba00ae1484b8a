@@ -1,0 +1,28 @@
+package br.com.ufpb.classes;
+
+import javax.swing.JOptionPane;
+
+public class Login {
+
+	
+	
+	private String nome;
+	private String matricula;
+	
+	
+		
+	
+	public void login(){
+		
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public String getMatricula() {
+		return matricula;
+	}
+	
+	
+}

@@ -1,0 +1,40 @@
+package classes;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import javax.swing.JOptionPane;
+
+public class Rank {
+
+	List<Aluno> rankeados;
+//	GerenciadorProfessor gerenciadorP = new GerenciadorProfessor();
+	Arquivo arquivo = new Arquivo();
+	
+	public Rank() {
+		rankeados = new ArrayList<>();
+	}
+	
+	public void mostrarRank(){
+		String rank = "";
+		List<Aluno> aux = new ArrayList<>();
+		try {
+			rankeados = arquivo.lerAluno();
+			Collections.sort(rankeados);
+			aux = rankeados;
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		for (Aluno aluno : aux) {
+			rank += (aluno.getNome() + "          " + aluno.getPontuacao() + "\n");
+		}
+		JOptionPane.showMessageDialog(null, "RANK\n\n" + rank);
+	}
+}

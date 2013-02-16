@@ -1,0 +1,44 @@
+package br.com.ufpb.testes;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class ArquivoTest {
+
+	@Before
+	public void setUp() throws Exception {
+	}
+
+	@Test
+	public void testEscreverPergunta() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testLerPergunta() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testEscreverAluno() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testLerAluno() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testEscreverRank() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testLerRank() {
+		fail("Not yet implemented");
+	}
+
+}

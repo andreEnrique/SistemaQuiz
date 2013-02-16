@@ -1,0 +1,27 @@
+package classes;
+
+import javax.swing.JOptionPane;
+
+public class Login {
+	
+	private static final String ADM_NOME      = "adm";
+	private static final String ADM_MATRICULA = "adm";
+	
+	AlunoMetodos 		 alunoM       = new AlunoMetodos();
+	GerenciadorProfessor gerenciadorP = new GerenciadorProfessor();
+	
+	public Login() {
+	}
+	
+	public void login(){
+		String nome = JOptionPane.showInputDialog("Digite seu nome:");
+		String matricula = JOptionPane.showInputDialog("Digite sua matricula:");
+		if(nome.equals(ADM_NOME) && matricula.equals(ADM_MATRICULA)){
+			gerenciadorP.menu();
+		}else{
+			alunoM.cadastrarAluno(nome, matricula);
+			alunoM.listarAluno();
+		}
+	}
+
+}

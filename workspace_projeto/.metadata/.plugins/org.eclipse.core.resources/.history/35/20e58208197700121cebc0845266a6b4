@@ -1,0 +1,11 @@
+package br.com.ufpb.classes;
+
+import javax.swing.JOptionPane;
+
+public class Rank {
+	
+	public void rank(){
+		JOptionPane.showMessageDialog(null, "Rank");
+	}
+
+}

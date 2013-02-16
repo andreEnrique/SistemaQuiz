@@ -1,0 +1,24 @@
+package classes;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Rank {
+
+	List<Aluno> rankeados;
+	
+	Login login = new Login();
+	
+	public Rank() {
+		rankeados = new ArrayList<>();
+	}
+	
+	public void mostrarRank(){
+		rankeados = login.gerenciadorP.alunoM.alunos;
+		for (Aluno aluno : rankeados) {
+			
+		}
+		
+	}
+	
+}
