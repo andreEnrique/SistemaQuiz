@@ -2,12 +2,7 @@ public enum Administrador{
 	
 	SENHA("ADM"), LOGIN("ADM");
 
-	public String senha;
-	public String login;
-
-	public Administrador (String senha, String login){
-	  this.senha="ADM";
-	  this.login="ADM";
 	
-	}
+
+	
 }
