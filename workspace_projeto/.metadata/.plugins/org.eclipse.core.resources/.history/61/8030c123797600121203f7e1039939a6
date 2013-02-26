@@ -1,9 +1,0 @@
-package br.com.ufpb.classes;
-
-import javax.swing.JOptionPane;
-
-public class Jogar {
-	public void jogar(){
-		JOptionPane.showMessageDialog(null, "Jogar");
-	}
-}

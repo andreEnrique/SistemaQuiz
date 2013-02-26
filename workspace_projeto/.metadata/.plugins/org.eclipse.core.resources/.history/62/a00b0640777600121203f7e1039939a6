@@ -1,9 +1,0 @@
-package br.com.ufpb.classes;
-
-public class GerenciadorProfessor {
-	
-	public void menu(){
-		
-	}
-
-}

@@ -1,9 +1,0 @@
-package classes;
-
-public class Jogar {
-
-	public int exibirPerguntas(){
-		int pontuacao = 0;
-		return pontuacao;
-	}
-}
