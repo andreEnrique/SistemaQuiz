@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, QuizActivity!</string>
+    <string name="app_name">Quiz</string>
+    <string name="jogar">Jogar</string>
+    <string name="ranking">Ranking</string>
+    <string name="intrucoes">Instruções</string>
+    <string name="login_invalido">Falha</string>
+    <string name="login_senha">Nome ou Matrícula inválidos</string>
+    <string name="sair">Sair</string>
+    <string name="msg_instrucoes">Instruções!\n\n Para jogar o quiz é muito fácil, basta você apertar em Jogar, daí abrirá duas janelas para você colocar seu nome e matrícula, respectivamente. Logo após é só começar a responder as perguntas,escolhendo a sua opção de 1 à 4, e depois aperte OK para confirmar.</string>
+    
+
+</resources>
